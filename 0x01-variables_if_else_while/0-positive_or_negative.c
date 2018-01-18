@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - prints whether random number n is positive or negative
  *
- * Return: Always 0 (Success)
+ *Return:0
  */
 int main(void)
 {
@@ -16,14 +16,13 @@ int main(void)
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
-	}
-	else if (n = 0)
-	{
-		printf("%d is zero\n", n);
-	}
-	else (n < 0)
+	} else if (n < 0)
 	{
 		printf("%d is negative\n", n);
+	}
+	else
+	{
+		printf("%d is zero\n", n);
 	}
 	return (0);
 }
