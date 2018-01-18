@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -S -macsm=intel $CFILE
