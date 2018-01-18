@@ -17,14 +17,13 @@ int main(void)
 	nvm = n %10;
 	if (nvm > 5)
 	{
-		printf("Last digit of %d is %d andis greater than 5\n", n, nvm);
+		printf("Last digit of %d is %d and is greater than 5\n", n, nvm);
 	} else if (nvm = 0)
 	{
 		printf("Last digit of %d is %d and is 0\n", n, nvm);
 	} else
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n"
-		       , n, nvm);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, nvm);
 	}
 	return (0);
 }
