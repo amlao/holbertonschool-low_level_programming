@@ -5,18 +5,19 @@
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
 	int i;
-	for(i = 0; i < 10; i++)
+
+	for (i = 0; i < 10; i++)
 	{
-		putchar(i);
-		putchar(',');
-		putchar(' ');
-	if(i < 9)
-	{
-		break;
+		putchar (i);
+		putchar (',');
+		putchar (' ');
+		if (i < 9)
+		{
+			break;
+		}
 	}
-	}
-	return(0);
+	return (0);
 }
