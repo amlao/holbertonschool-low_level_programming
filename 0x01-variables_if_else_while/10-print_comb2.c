@@ -5,10 +5,20 @@
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
 	int a, b;
-	for(a = 00, a < 99, a++)
-	
-	for(b = 00, b < 99, b++)
+
+	for (a = '0'; a <= '9', a++)
+	{
+		putchar (a);
+		putchar (b);
+		if (!(a == '9' && b == '9'))
+		{
+			putchar (',');
+			putchar (' ');
+		}
+	}
+	putchar ('\n');
+	return (0);
 }
