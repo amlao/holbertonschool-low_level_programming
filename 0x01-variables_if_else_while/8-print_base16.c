@@ -5,17 +5,22 @@
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
-	char c;
 	int i;
-	for(i = '0'; i < 10; i++)
+
+	i = '0';
+	while (i <= '9')
 	{
-		putchar('i');
+		putchar(i);
+		i++;
 	}
-	for(c = 'a'; c < 'g'; c++)
-	{
-		putchar('c');
-        }
-	return(0);
+	i = 'a';
+	while (i <= 'f'
+		{
+			putchar(i);
+			i++;
+		}
+		putchar ('\n');
+		return (0);
 }
