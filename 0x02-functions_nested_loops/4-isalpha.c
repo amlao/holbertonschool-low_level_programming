@@ -1,20 +1,13 @@
 #include "holberton.h"
 
+/**
+ *print_sign(int n) - write a function that prints the sign of a number
+ */
 int _isalpha(int c)
 {
-	char c;
-
-	if (islower(c))
+	if ((c >= 'a' && c >= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		_putchar(1);
+		return (1);
 	}
-	else if (isalpha(c))
-	{
-		_putchar(1);
-	}
-	else
-	{
-		_putchar(0);
-	}
-	return (0);
+		return (0);
 }

@@ -1,16 +1,18 @@
 #include "holberton.h"
 
-int _islower(void)
+/**
+ *_isalpha - checks for alphabetic character
+ *
+ *@c - character to check
+ *
+ *Return 1 if true
+ *
+ */
+int _islower(int c)
 {
-	char c;
-
-	if (islower(c))
+	if (c >= 'a' && c <= 'z')
 	{
-		_putchar(1);
+		return (1);
 	}
-	else
-	{
-		_putchar(0);
-	}
-		return (0);
+	return (0);
 }
