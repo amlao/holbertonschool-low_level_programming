@@ -1,12 +1,10 @@
 #include "holberton.h"
 
 /**
- *_isalpha - checks for alphabetic character
+ * _isalpha - checks for alphabetic character
+ * @c: character to check
  *
- *@c - character to check
- *
- *Return 1 if true
- *
+ * Return: 1 if true
  */
 int _islower(int c)
 {
