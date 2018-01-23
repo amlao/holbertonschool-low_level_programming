@@ -1,0 +1,12 @@
+#include "holberton.h"
+
+int _abs(int)
+{
+	int x;
+
+	for (abs(x));
+	{
+		_putchar(x);
+	}
+	return(0);
+}
