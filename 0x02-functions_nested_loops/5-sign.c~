@@ -1,6 +1,0 @@
-#include "holberton.h"
-
-int print_sign(void)
-{
-
-}

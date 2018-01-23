@@ -1,9 +1,0 @@
-#include "holberton.h"
-
-int _islower(void)
-{
-	char x;
-
-	if (x == 'c')
-		return (1);
-}
