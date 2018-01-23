@@ -1,12 +1,11 @@
 #include "holberton.h"
 
-int print_last_digit(void)
+/**
+ * print_last_digit - prints the last digit of a number
+ * Returns the value of the last digit
+ */
+int print_last_digit(int x)
 {
-	int x;
-
-	for (abs(x))
-	{
-		_putchar(x%10 + '0');
-	}
-	return (0);
+	_putchar((x % 10) + '0');
+	return ((x % 10) * -1);
 }

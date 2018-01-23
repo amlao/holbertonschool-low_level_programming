@@ -12,14 +12,13 @@ void jack_bauer(void)
 			{
 				for (z = '0'; z <= '9'; z++)
 				{
-					if ( (w&x < 24)&&(y&z < 60)
+					if (w & x < 24) && (y & z < 60)
 						{
 							_putchar(w);
 							_putchar(x);
 							_putchar(':');
 							_putchar(y);
 							_putchar(z);
-						}
 						}
 				}
 			}
