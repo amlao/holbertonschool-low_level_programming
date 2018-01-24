@@ -1,12 +1,9 @@
 #include "holberton.h"
 
 /**
- *print_sign - prints the sign of a number
- *
- *@c character to compare
- *
- *Return (1) if greater than zero, (0) if is zero, or (-1) if less than zero.
- *
+ * print_sign - prints the sign of a number
+ * @n character to compare
+ * Return: (1) if greater than zero, (0) if is zero, or (-1) if less than zero.
  */
 int print_sign(int n)
 {

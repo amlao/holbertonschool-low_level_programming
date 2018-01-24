@@ -1,9 +1,12 @@
 #include "holberton.h"
 
-int add(int, int)
+/**
+ * add - adds two integers and returns the result
+ * @a: first integer
+ * @b: second integer
+ * Return: sum of integers
+ */
+int add(int a, int b)
 {
-	int x, y, z;
-
-	x = y + z;
-	for ()
+	return (a + b);
 }
