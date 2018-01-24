@@ -1,6 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 
+
+/**
+ * print_to_98: print up to 98
+ * @n: random digit
+ * Return: print
+ */
 void print_to_98(int n)
 {
 	if (n < 98)
