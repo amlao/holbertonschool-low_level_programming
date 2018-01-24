@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_sign - write a function that prints the sign of a number
- * @c: character to compare
+ * _isalpha - checks if upper or lowercase
+ * @c: character to check
  * Return: (1) if lowercase else (0)
  */
 int _isalpha(int c)
