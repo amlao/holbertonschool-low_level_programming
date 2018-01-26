@@ -3,6 +3,7 @@
 
 /**
  * main - print FizzBuzz
+ * Return: 0
  */
 int main(void)
 {
