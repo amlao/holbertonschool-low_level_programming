@@ -7,16 +7,5 @@
  */
 void reset_to_98(int *n)
 {
-	int a = 98;
-	int b = 402;
-	int c = a;
-
-	if (c > b)
-	{
-		*n = b;
-	}
-	else
-	{
-		*n = a;
-	}
+	*n = 98;
 }
