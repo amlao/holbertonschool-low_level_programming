@@ -1,0 +1,24 @@
+#include "holberton.h"
+
+/**
+ * leet - encodes a string into 1337
+ * @s: string
+ * Return: string
+ */
+char *leet(char *s)
+{
+	int i = 0;
+	int j = 0;
+	char array[] = "a4A4e3E3o0O0t7T7l1L1";
+
+	while (s[i] != '\0')
+	{
+		for (j = 0; j < array[i]; j += 2)
+		{
+			if (s[i] == array[j])
+				s[i] = array[j + 1];
+		}
+		i++;
+	}
+	return (s);
+}
