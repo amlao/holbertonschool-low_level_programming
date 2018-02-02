@@ -8,8 +8,8 @@
  */
 char *rot13(char *s)
 {
-	char s1[] = "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz";
-	char s2[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
+	char s1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char s2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i = 0;
 	int j = 0;
 
@@ -18,11 +18,12 @@ char *rot13(char *s)
 		for (j = 0; s1[j] != '\0'; j++)
 		{
 			if (s[i] == s1[j])
-			    {
-				    s[i] = s2[j];
-			    }
+			{
+				s[i] = s2[j];
+				break;
+			}
 		}
 		i++;
-        }
+	}
 	return (s);
 }
