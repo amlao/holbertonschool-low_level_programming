@@ -17,21 +17,22 @@ char *cap_string(char *s)
 	{
 		switch (s[i])
 		{
-		case ',' :
-		case ';' :
-		case '.' :
-		case '!' :
-		case '?' :
-		case '"' :
-		case '(' :
-		case ')' :
-		case '{' :
-		case '}' :
-		case ' ' :
-		case '\t' :
-		case '\n' :
+		case ',':
+		case ';':
+		case '.':
+		case '!':
+		case '?':
+		case '"':
+		case '(':
+		case ')':
+		case '{':
+		case '}':
+		case ' ':
+		case '\t':
+		case '\n':
 			if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
 				s[i + 1] -= 32;
+			break;
 		default:
 			break;
 		}
