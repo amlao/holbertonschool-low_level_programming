@@ -19,9 +19,9 @@ char *_strstr(char *haystack, char *needle)
 			{
 				break;
 			}
-			if (needle[j] != haystack[i]
+			if (needle[j] == haystack[i]
 			{
-				
+				return (haystack + i);
 			}
 		}
 	}
