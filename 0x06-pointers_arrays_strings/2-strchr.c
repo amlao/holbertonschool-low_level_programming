@@ -9,11 +9,14 @@
 char *_strchr(char *s, char c)
 {
 	int count;
-	int length;
+	int length = 0;
 
 	for (count = 0; s[count] != '\0'; count++)
 	{
 		length++;
+	}
+	for (count = 0; count <= length; count++)
+	{
 		if (s[count] == c)
 			return (s + count);
 	}
