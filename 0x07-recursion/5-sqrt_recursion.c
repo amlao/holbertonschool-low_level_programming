@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * root -
- * @start:
- * @end:
- * Return:
+ * root - find if it is square root
+ * @start: base
+ * @end: iterator
+ * Return: if square root or not
  */
 int root(int start, int end)
 {
