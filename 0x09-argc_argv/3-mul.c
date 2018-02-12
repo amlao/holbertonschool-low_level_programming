@@ -7,7 +7,7 @@
  * @argv: array of strings
  * Return: 0 if successful, 1 if program does not receive 2 arguments
  */
-int main( int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc == 3)
 	{
