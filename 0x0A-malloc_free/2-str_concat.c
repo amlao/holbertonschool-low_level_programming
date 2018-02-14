@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * *str_concat - concatenates two strings
@@ -40,14 +41,15 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	while (s1[count1] != '\0')
+	while (s1[counter1] != '\0')
 	{
-		s[count1] = s1[count1];
-		count1++;
+		s[counter1] = s1[counter1];
+		counter1++;
 	}
-	while (s2[count2] != '\0')
+	while (s2[counter2] <= '\0')
 	{
-		s[count1 + count2] = s2[count2];
-		count2++;
+		s[counter1 + counter2] = s2[counter2];
+		counter2++;
 	}
+	return (s);
 }
