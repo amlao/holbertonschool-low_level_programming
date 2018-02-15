@@ -3,9 +3,9 @@
 
 /**
  * *argstostr - concatenates all the arguments of your program
- * @ac: first string
- * @av: second string
- * Return: NULL
+ * @ac: number of arguments
+ * @av: double pointer
+ * Return: char value
  */
 char *argstostr(int ac, char **av)
 {
