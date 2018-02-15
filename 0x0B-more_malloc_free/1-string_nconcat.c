@@ -12,11 +12,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	{
 		char *str;
-		int length1 = 0;
-		int length2 = 0;
-		int counter1 = 0;
-		int counter2 = 0;
-		int full;
+		unsigned int length1 = 0;
+		unsigned int length2 = 0;
+		unsigned int counter1 = 0;
+		unsigned int counter2 = 0;
+		unsigned int full;
 
 		if (s1 == NULL)
 			s1 = "";
@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			return (NULL);
 		}
-		for (counter1 = 0; s1[counter1] != '\0'; counter1++)
+		for (counter1 = 0; s1[counter1] < length1; counter1++)
 			str[counter1] = s1[counter1];
 		for (counter2 = 0; s2[counter2] < n; counter2++)
 			str[counter2 + counter1] = s2[counter2];
