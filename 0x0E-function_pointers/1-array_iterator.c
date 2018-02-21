@@ -1,4 +1,4 @@
-#include <stdio.e
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -9,12 +9,12 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i = 0;
+	size_t i = 0;
 
 	if (array == NULL && size == 0)
 		return;
 	while (i < size)
-        {
+	{
 		action(array[i]);
 		i++;
 	}
