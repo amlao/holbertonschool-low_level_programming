@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	hold = get_op_func(argv[2]);
-	if (hold == NULL)
+	if (hold == NULL || arv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	result = hold(a,b);
+	result = hold(a, b);
 	printf("%d\n", result);
 	return (0);
 }
