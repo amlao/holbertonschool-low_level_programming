@@ -8,7 +8,7 @@
  */
 void print_char(va_list args)
 {
-	printf("%s", va_arg(args, int));
+	printf("%c", va_arg(args, int));
 }
 /**
  * print_int - print integer
@@ -34,8 +34,9 @@ void print_str(va_list args)
 {
 	char *s = va_arg(args, char *);
 
-	if (*s == NULL)
-		printf("(nil)");
+	if (s == NULL)
+		s = "(nil)";
+	printf("%s", s);
 }
 
 
@@ -47,25 +48,26 @@ void print_all(const char * const format, ...)
 {
 	int counter1 = 0;
 	int counter2 = 0;
-	char *separator[] = ["", ", "];
-	char *separray[] = separator[0];
+	char *separator[] = {"", ", "};
+	char *separray = separator[0];
 	va_list args;
 
-	style styletypes[] = {
+	style type[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_fl},
-		{"s", print_str}
+		{"s", print_str},
+		{NULL, NULL}
 	};
-	separator = ", ";
-	while (format[counter] != '\0')
+	va_start(args, format);
+	while (format[counter1] != '\0')
 	{
-		while(stylestypes[counter2].f == NULL)
+		while(type[counter2].f == NULL)
 		{
-			if (styletypes[counter1].st == format[counter1])
+			if (*type[counter1].st == format[counter1])
 			{
 				printf("%s", separray);
-				(format[counter1].f(type));
+				(type[counter1].f(args));
 			}
 			counter2++;
 		}
@@ -73,4 +75,5 @@ void print_all(const char * const format, ...)
 		separray = separator[1];
 	}
 	printf("\n");
+	va_end(args);
 }
