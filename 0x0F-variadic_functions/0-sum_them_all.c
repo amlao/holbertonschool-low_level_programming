@@ -10,7 +10,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int counter = 0;
-	unsigned int sum = 0;
+	int sum = 0;
 	va_list valist;
 
 	if (n == 0)
@@ -20,7 +20,7 @@ int sum_them_all(const unsigned int n, ...)
 
 	while (counter < n)
 	{
-		sum += va_arg(valist, unsigned int);
+		sum += va_arg(valist, int);
 		counter++;
 	}
 
