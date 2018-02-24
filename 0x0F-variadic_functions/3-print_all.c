@@ -48,8 +48,7 @@ void print_all(const char * const format, ...)
 {
 	int counter1 = 0;
 	int counter2 = 0;
-	char *separator[] = {"", ", "};
-	char *separray = separator[0];
+	char *separator;
 	va_list args;
 
 	style type[] = {
@@ -60,19 +59,21 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	va_start(args, format);
+	separator = "";
 	while (format[counter1] != '\0')
 	{
-		while(type[counter2].f == NULL)
+		counter2 = 0;
+		while(type[counter2].st != NULL)
 		{
-			if (*type[counter1].st == format[counter1])
+			if (format[counter1] == *(type[counter2].st))
 			{
-				printf("%s", separray);
+				printf("%s", separator);
 				(type[counter1].f(args));
+				separator = ", ";
 			}
 			counter2++;
 		}
 		counter1++;
-		separray = separator[1];
 	}
 	printf("\n");
 	va_end(args);
