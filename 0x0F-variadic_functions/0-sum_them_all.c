@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - returns the sume of all its parameters
+ * sum_them_all - the sum of all its parameters
  * @n: number of arguments
  * Return: The sum of all parameters
  */
