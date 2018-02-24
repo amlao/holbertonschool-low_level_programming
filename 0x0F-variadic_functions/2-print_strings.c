@@ -17,7 +17,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (counter = 0; counter < n; counter++)
 	{
-		s = va_arg(valist, char);
+		s = va_arg(valist, char *);
 		if (s == NULL)
 			printf("(nil)");
 		if (separator == NULL)
@@ -26,5 +26,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("%s", separator);
 	}
 	printf("\n");
-	va_end(ap);
+	va_end(valist);
 }
