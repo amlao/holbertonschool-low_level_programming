@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	va_start(args, format);
-	while (format[counter1] != '\0' && format != NULL)
+	while (format != NULL && format[counter1] != '\0')
 	{
 		counter2 = 0;
 		while (type[counter2].st != NULL)
@@ -70,10 +70,10 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				type[counter2].f(args);
+				separator = separator2;
 			}
 			counter2++;
 		}
-		separator = separator2;
 		counter1++;
 	}
 	printf("\n");
