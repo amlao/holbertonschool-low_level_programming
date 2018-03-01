@@ -18,6 +18,12 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	n->str = strdup(str);
+	if (n->str == NULL)
+	{
+		free (n);
+		return (NULL);
+	}
+
 	while (n->str[count] != 0)
 		count++;
 	n->len = count;
