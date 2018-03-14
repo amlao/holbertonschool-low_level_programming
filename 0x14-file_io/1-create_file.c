@@ -19,7 +19,10 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (!text_content)
+	{
+		close(fd);
 		return (1);
+	}
 
 	while (text_content[count])
 	{
@@ -29,8 +32,10 @@ int create_file(const char *filename, char *text_content)
 
 	fdwrite = write(fd, text_content, count);
 	if (fdwrite == -1)
+	{
+		close(fd);
 		return (-1);
+	}
 
-	close(fd);
 	return (1);
 }
