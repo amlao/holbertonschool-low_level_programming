@@ -27,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	count++;
 
-	fdwrite = write(fd, text_content, counter);
+	fdwrite = write(fd, text_content, count);
 	if (fdwrite == -1)
 		return (-1);
 
