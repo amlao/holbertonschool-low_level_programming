@@ -11,7 +11,7 @@ void hash_table_delete(hash_table_t *ht)
 
 	if (!ht)
 		return;
-	for (; count < ht->size;)
+	while (count < ht->size)
 	{
 		movement = ht->array[count];
 		while (tmp)
