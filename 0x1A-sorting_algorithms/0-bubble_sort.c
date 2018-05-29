@@ -2,8 +2,8 @@
 
 /**
  * bubble_sort - print the array after each time you swap the two elements
- * @array: array
- * @size: size
+ * @array: pointer to an array
+ * @size: size of the array
  */
 void bubble_sort(int *array, size_t size)
 {
