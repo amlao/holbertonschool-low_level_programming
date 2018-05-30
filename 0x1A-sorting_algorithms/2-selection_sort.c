@@ -8,7 +8,7 @@
 void selection_sort(int *array, size_t size)
 {
 	int i, j, min, holder;
-	bool res;
+	size_t res;
 	int sizeee;
 
 	sizeee = size;
