@@ -7,9 +7,9 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *traverse, *holder;
+	listint_t *traverse;
 
-	if (!list || !(*list) || (*list)->next == NULL)
+	if (!list || !(*list))
 		return;
 
 	traverse = *list;
@@ -18,19 +18,16 @@ void insertion_sort_list(listint_t **list)
 	{
 		while (traverse->prev && traverse->prev->n > traverse->n)
 		{
-			holder = traverse;
+			traverse->prev->next = traverse->next;
 			if (traverse->next)
 				traverse->next->prev = traverse->prev;
-			traverse->prev->next = holder->next;
-
-			traverse = traverse->prev;
-			holder->prev = traverse->prev;
-			holder->next = traverse;
+			traverse->next = traverse->prev;
+			traverse->prev = traverse->prev->prev;
+			traverse->next->prev = traverse;
 			if (traverse->prev)
-				traverse->prev->next = holder;
+				traverse->prev->next = traverse;
 			else
-				holder = *list;
-
+			        traverse = *list;
 			print_list(*list);
 		}
 		traverse = traverse->next;
