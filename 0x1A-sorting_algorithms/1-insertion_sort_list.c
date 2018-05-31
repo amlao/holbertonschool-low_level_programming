@@ -9,7 +9,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *traverse;
 
-	if (!list || !(*list))
+	if (!list || !(*list) || (*list)->next == NULL)
 		return;
 
 	traverse = *list;
@@ -27,7 +27,7 @@ void insertion_sort_list(listint_t **list)
 			if (traverse->prev)
 				traverse->prev->next = traverse;
 			else
-			        traverse = *list;
+				traverse = *list;
 			print_list(*list);
 		}
 		traverse = traverse->next;
