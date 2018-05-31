@@ -75,7 +75,7 @@ void sortof(int *array, int min, int max, size_t size)
   */
 void quick_sort(int *array, size_t size)
 {
-	if (!array || size < 2)
+	if (!array)
 		return;
 
 	sortof(array, 0, size - 1, size);
