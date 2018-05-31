@@ -27,7 +27,7 @@ void insertion_sort_list(listint_t **list)
 			if (traverse->prev)
 				traverse->prev->next = traverse;
 			else
-				traverse = *list;
+				*list = traverse;
 			print_list(*list);
 		}
 		traverse = traverse->next;
