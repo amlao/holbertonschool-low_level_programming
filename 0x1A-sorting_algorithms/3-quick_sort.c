@@ -2,6 +2,7 @@
 
 /**
  * swap - swaps two elements
+ * @array: pointer to an array
  * @i: first value
  * @j: second value
  */
@@ -33,19 +34,19 @@ int partition(int *array, int min, int max, size_t size)
 		{
 			if (min != i)
 			{
-				swap(array, pivot, i);
+				swap(array, min, i);
 				print_array(array, size);
-				pivot += 1;
 			}
+			min++;
 		}
 	}
 
-	if (pivot != max)
+	if (min != max)
 	{
-		swap(array, pivot, max);
+		swap(array, min, max);
 		print_array(array, size);
 	}
-	return (pivot);
+	return (min);
 }
 
 /**
@@ -57,14 +58,14 @@ int partition(int *array, int min, int max, size_t size)
  */
 void sortof(int *array, int min, int max, size_t size)
 {
-	int pivot;
+	int pivot = 0;
 
-	pivot = partition(array, min, max, size);
-
-	if (pivot - 1 > min && pivot < max)
+	if (min < max)
+	{
+		pivot = partition(array, min, max, size);
 		sortof(array, min, pivot - 1, size);
-	if (pivot + 1 < max)
 		sortof(array, pivot + 1, max, size);
+	}
 }
 
 /**
@@ -74,7 +75,7 @@ void sortof(int *array, int min, int max, size_t size)
   */
 void quick_sort(int *array, size_t size)
 {
-	if (!array)
+	if (!array || size < 2)
 		return;
 
 	sortof(array, 0, size - 1, size);
