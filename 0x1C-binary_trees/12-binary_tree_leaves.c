@@ -6,7 +6,7 @@
  */
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
-	size_t l, r, full;
+	size_t l, r, sum;
 
 	if (!tree)
 		return (0);
