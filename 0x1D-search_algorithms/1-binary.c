@@ -33,21 +33,18 @@ int binary_search(int *array, size_t size, int value)
 	size_t start = 0;
 	size_t mid, end;
 
-	end = size - 1;
-	mid = (start + end) / 2;
-	if (array != NULL && size > 0)
+	for (; start <= end;)
 	{
+		end = size - 1;
+		mid = (start + end) / 2;
 		print_array(array + start, end - start + 1);
-		for (; start < end;)
-		{
-			if (array[mid] < value)
-				start = mid + 1;
-			else if (array[mid] > value)
-				end = mid;
-			else
-				return (mid);
-			print_array(array + start, end - start + 1);
-		}
+		if (array[mid] == value)
+			return (mid);
+		else if (array[mid] > value)
+			end = mid - 1;
+		else
+			start = mid + 1;
+		print_array(array + start, end - start + 1);
 	}
 	return (-1);
 }
