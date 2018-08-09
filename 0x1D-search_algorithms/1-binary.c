@@ -1,4 +1,24 @@
 #include "search_algos.h"
+
+/**
+ * print_array - prints an array of integers
+ * @array: the array to print
+ * @size: the size of array
+ */
+void print_array(int *array, size_t size)
+{
+	size_t i = 0;
+
+	printf("Searching in array:");
+	for (; i < size; i++)
+	{
+		printf(" %d", array[i]);
+		if (i != size - 1)
+			printf(",");
+	}
+	printf("\n");
+}
+
 /**
  * binary_search - searches for a value in a sorted array of integers using the
  * Binary search algorithm
@@ -10,15 +30,24 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int i;
+	size_t start = 0;
+	size_t mid, end;
 
-	i = size/2;
-	if (size < 1)
-		return(-1);
-	if (size == 1)
-		return(array[0]);
-	if (value == array[i])
-		return(value);
-	else
-		binary_search(array + i, size - i, value);
+	end = size - 1;
+	mid = (start + end) / 2;
+	if (array != NULL && size > 0)
+	{
+		print_array(array + start, end - start + 1);
+		for (; start < end;)
+		{
+			if (array[mid] < value)
+				start = mid + 1;
+			else if (array[mid] > value)
+				end = mid;
+			else
+				return (mid);
+			print_array(array + start, end - start + 1);
+		}
+	}
+	return (-1);
 }
