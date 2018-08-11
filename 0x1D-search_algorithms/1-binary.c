@@ -3,14 +3,15 @@
 /**
  * print_array - prints an array of integers
  * @array: the array to print
- * @size: the size of array
+ * @first: the first element of the array
+ * @last: the last element of the array
  */
 void print_array(int *array, size_t first, size_t last)
 {
 	size_t counter;
 
 	counter = first;
-	for (; array != NULL && counter <= last; counter++)
+	for (; array != NULL && counter <= last; ++counter)
 	{
 		if (counter > first)
 			printf(", ");
