@@ -6,12 +6,12 @@
  * @first: the first element of the array
  * @last: the last element of the array
  */
-void print_array(int *array, size_t first, size_t last)
+void print_array(const int *array, size_t first, size_t last)
 {
 	size_t counter;
 
 	counter = first;
-	for (; array != NULL && counter <= last; ++counter)
+	for (; array && counter <= last; ++counter)
 	{
 		if (counter > first)
 			printf(", ");
@@ -29,20 +29,21 @@ void print_array(int *array, size_t first, size_t last)
  * Return: the first index where value is located else if value is not
  * present in array or if array is NULL, your function must return -1
  */
+
 int binary_search(int *array, size_t size, int value)
 {
 	size_t start = 0;
 	size_t mid, end;
 
-	if (array)
+	if (!array)
 		return (-1);
 
+	end = size - 1;
 	for (; start <= end;)
 	{
-		end = size - 1;
-		mid = (start + end) / 2;
 		printf("Searching in array: ");
 		print_array(array, start, end);
+		mid = (start + end) / 2;
 		if (array[mid] == value)
 			return (mid);
 		else if (array[mid] > value)
